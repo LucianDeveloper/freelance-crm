@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: "Raleway";
+  src: url("Raleway/Raleway-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+    font-family: "Raleway";
+  src: url("Raleway/Raleway-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+$main: #1795DD;
+$main-dark: #005FAF;
+$text-color: #2C2D2E;
+$gray: #BFC1C7;
+$gray-light: #F8F8FA;
+$white : #FFFFFF;
+$font: 'Raleway', sans-srif;
+$roboto: 'Roboto', sans-srif;
+$border-color: rgba(0, 16, 61, 0.12);
+$border-color-active: rgba(0, 16, 61, 0.24);
+
+@mixin size ($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin font ($font, $weight, $size, $height, $color) {
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}

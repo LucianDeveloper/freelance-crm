@@ -1,0 +1,267 @@
+@import "variables";
+body{
+    margin: 0;
+}
+
+.error-boundary {
+    color: white;
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+h3{
+    @include font($font, 700, 24px, 32px, $text-color);
+    text-align: center;
+    margin: 0 0 36px 0;
+}
+.log_in_form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+
+}
+.log_in_fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 40px;
+    background: white;
+    border: 1px solid #BFC1C7;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+.input_mail{
+    width: 298px;
+    border: 1px solid #BFC1C7;
+    border-radius: 12px;
+    padding: 8px 20px;
+    margin-bottom: 24px;
+    @include font($font, 400, 18px, 24px, #6C7180);
+}
+.input_pass{
+    width: 298px;
+    border: 1px solid #BFC1C7;
+    border-radius: 12px;
+    padding: 8px 20px;
+    @include font($font, 400, 18px, 24px, #6C7180);
+}
+.btn_enter{
+    display: block;
+    @include font($font, 700, 18px, 24px, $white);
+    padding: 16px;
+    background: $main;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.btn_new_client{
+    display: block;
+    @include font($font, 700, 18px, 24px, $white);
+    padding: 16px 48px;
+    background: $main;
+    border-radius: 12px;
+    border: none;
+    margin-left: 40px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.registration_link{
+    @include font($font, 500, 18px, 24px, $main-dark);
+    text-decoration: none;
+    text-align: center;
+}
+.name_field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name_field_text{
+    @include font($font, 500, 18px, 24px, $text-color);
+    max-width: 150px;
+}
+.centr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    background:  #CDD1D4;
+    width: 100%;
+    max-height: 100px;
+    display: flex;
+}
+.login_wrap{
+    justify-self: center;
+    height: 100%;
+    display: flex;
+}
+.footer_link{
+    @include font($font, 400, 12px, 18px, $text-color);
+    text-decoration: none;
+}
+.footer_link_p{
+    @include font($font, 400, 12px, 18px, $text-color);
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+.footer_link_block{
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    padding: 16px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_text{
+    @include font($font, 400, 12px, 18px, $text-color);
+}
+.header_wrap{
+    background: $main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.logo_img{
+    width: 186px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.header_img{
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.menu{
+    display: flex;
+}
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.menu_img{
+    width: 48px;
+    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+}
+.menu_title{
+    margin: 0;
+    @include font($font, 700, 16px, 24px, $white);
+}
+.link_menu{
+    text-decoration: none;
+
+}
+.link_menu:active{
+    background: red;
+}
+.header_person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person_info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}
+.person_name{
+    @include font($font, 400, 18px, 24px, $white);
+    margin: 0;
+}
+.person_inn{
+    @include font($roboto, 400, 16px, 24px, $white);
+    margin: 0;
+}
+.menu_link{
+    min-width: 120px;
+}
+.exit_img{
+    width: 32px;
+    height: auto;
+}
+.clients_wrap{
+    background: $gray-light;
+    height: calc(100vh - 88px);
+    display: flex;
+    padding: 48px 64px;
+}
+.clients_main{
+    max-width: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.clients_side{
+    max-width: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    margin: 0;
+    @include font($font, 700, 24px, 32px, $text-color);
+}
+.new_client{
+    display: flex;
+    align-items: center;
+}
+.surch{
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+.surch_input{
+    width: 100%;
+    padding: 8px 20px;
+    @include font($font, 400, 16px, 24px, #6C7180);
+    border: 1px solid #BFC1C7;
+    border-radius: 12px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+.clients_nbr{
+    @include font($roboto, 500, 18px, 24px, $text-color);
+    margin-bottom: 16px;
+}
+.clients_nbr_text{
+    @include font($font, 400, 18px, 24px, $text-color);
+}
+.sorting_wrap{
+    background: white;
+    width: 100%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.drop_item{
+    display: flex;
+    align-items: center;
+}
+.drop_img{
+    width: 10px;
+    height: auto;
+}
+.drop_text{
+     @include font($font, 700, 14px, 24px, $text-color);
+    margin: 0;
+}

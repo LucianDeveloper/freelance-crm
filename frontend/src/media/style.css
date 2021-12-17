@@ -1,0 +1,9 @@
+@import "variables";
+.error-boundary {
+    color: white;
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
