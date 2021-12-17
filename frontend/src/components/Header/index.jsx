@@ -20,7 +20,7 @@ const Header = () => {
                 <nav className="menu">
                      <div className="menu_link"><a className="link_menu" href="">
                         <div className="menu_item">
-                            <img  className="menu_img" src={timetable} alt=""/>
+                            <img  className="menu_img" src={main} alt=""/>
                             <p className="menu_title">Главная</p>
                         </div>
                     </a></div>
