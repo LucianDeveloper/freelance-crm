@@ -381,6 +381,18 @@ h2{
     text-decoration: none;
     margin-bottom: 16px;
 }
+.news_side_card_btn_blue{
+    display: block;
+    @include font($font, 500, 16px, 24px, $text-color);
+    padding: 8px 18px;
+    background: #6AB6E1;
+    border-radius: 12px;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin-bottom: 16px;
+    text-align: center;
+}
 .clients_side_card_btn_gray{
     display: block;
     @include font($font, 500, 16px, 24px, $text-color);
@@ -412,20 +424,36 @@ h2{
     flex-wrap: wrap;
 }
 .news_item{
-    width: calc(30% - 27px);
-    height: 214px;
+    max-width: calc(100% / 3 - 72px);
+    height: fit-content;
     border-radius: 12px;
     overflow: hidden;
     background: white;
     background-size: cover;
-    padding: 40px;
-    margin-right: 40px;
+    padding: 28px;
+    margin-right: 16px;
 }
 .news_title{
-    @include font($font, 700, 18px, 24px, $text-color);
+    @include font($font, 700, 16px, 24px, $text-color);
     padding-bottom: 16px;
 }
 .news_subtitle{
-    @include font($font, 400, 18px, 24px, $text-color);
+    @include font($font, 400, 16px, 24px, $text-color);
     padding-bottom: 20px;
+}
+.news_img{
+    width: 100%;
+    margin: 0;
+}
+.news_img_wrap{
+    border-radius: 12px;
+    overflow: hidden;
+}
+.news_item{
+    margin-bottom: 16px;
+}
+.useful_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
