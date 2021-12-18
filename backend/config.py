@@ -53,7 +53,7 @@ db_paths = DBPaths()
 DB_URL = environ.get('DB_URL', "sqlite://sql_app.db")
 URL = environ.get('URL', "http://127.0.0.1:8000/api")
 TOKEN_TG = environ.get('TOKEN_TG', '1971498893:AAFEYk6hTFUHNC5FDI7uqZEaF4-g-JORR2U')
-ALLOW_CORS = environ.get('ALLOW_CORS', 'http://192.168.1.123:3000')
+ALLOW_CORS = environ.get('ALLOW_CORS', 'http://127.0.0.1:3000')
 
 SECRET = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"

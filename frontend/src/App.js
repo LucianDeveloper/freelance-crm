@@ -8,11 +8,12 @@ import {NotificationContainer} from "react-notifications";
 // import Header from "./components/Header";
 // import Home from "./pages/Home";
 import Login from "./pages/LoginPage";
-import '../src/media/style.scss'
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Clients from "./pages/Clients";
+import Products from "./pages/Products";
 
+import '../src/media/style.scss'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                        <Header />
                        <div className='mainContentLayout'>
                            <Routes>
+                               <Route path='/products' element={<Products />}/>
                                <Route path='/clients' element={<Clients />}/>
                                <Route path='/' element={<Home />}/>
                            </Routes>

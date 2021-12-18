@@ -1,3 +1,5 @@
+@import "../../media/variables";
+
 .modal {
   position: fixed;
   top: 0;
@@ -30,6 +32,7 @@
   -webkit-animation-duration: 0.4s;
   animation-name: slide-in;
   animation-duration: 0.5s;
+  border-radius: 12px;
 }
 
 .modal-header,
@@ -39,8 +42,8 @@
   padding: 1rem;
 }
 .modal-header {
-  border-bottom: 1px solid #dbdbdb;
   justify-content: space-between;
+  padding: 40px 40px 16px 40px;
 }
 .modal-footer {
   border-top: 1px solid #dbdbdb;
@@ -55,7 +58,7 @@
   overflow: auto;
 }
 .modal-content {
-  padding: 1rem;
+  padding: 0 80px 48px 80px;
 }
 
 .modal-title {
@@ -77,4 +80,69 @@
   to {
     transform: translateY(0);
   }
+}
+.cross_img{
+  width: 20px;
+}
+.edit_img_modal{
+  width: 20px;
+  margin-right: 16px;
+}
+.modal_title{
+  @include font($font, 700, 24px, 32px, $text-color);
+  text-align: center;
+  margin: 0 0 28px 0;
+}
+.modal_subtitle{
+  @include font($font, 700, 18px, 24px, $text-color);
+  margin: 0 0 4px 0;
+}
+.modal_input{
+  width: 100%;
+  padding: 8px 20px;
+  @include font($font, 400, 16px, 24px, black);
+  border: 1px solid #BFC1C7;
+  border-radius: 12px;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 16px;
+}
+.modal_input_tel{
+    width: 100%;
+  padding: 8px 20px;
+  @include font($roboto, 400, 16px, 24px, black);
+  border: 1px solid #BFC1C7;
+  border-radius: 12px;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 16px;
+}
+.modal_subtitle_center{
+  @include font($font, 700, 18px, 24px, $text-color);
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+.modal_massage_input{
+     max-width: 100%;
+    min-width: 100%;
+    min-height: 108px;
+    padding: 8px 20px;
+    @include font($font, 400, 14px, 24px, #6C7180);
+    border: 1px solid #BFC1C7;
+    border-radius: 12px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 16px;
+}
+.btn_save{
+    display: block;
+    @include font($font, 700, 18px, 24px, $white);
+    padding: 12px 0;
+    background: $main;
+    border-radius: 12px;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
 }

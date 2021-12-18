@@ -1,0 +1,71 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    container_name: cam_backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    env_file:
+      - ./.prod.env
+    expose:
+      - 8000
+    volumes:
+      - ./media:/home/app/media
+    networks:
+      - cam_net
+    logging:
+      options:
+        max-size: 10m
+
+  bot:
+    build:
+      context: telegram/
+      dockerfile: Dockerfile
+    container_name: cam_telegram
+    entrypoint: python main.py
+    env_file:
+      - ./.prod.env
+    depends_on:
+      - nginx
+    networks:
+      - cam_net
+
+  nginx:
+    image: nginx:mainline-alpine
+    container_name: cam_nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - cam_net
+    logging:
+      options:
+        max-size: 10m
+
+  frontend:
+    build:
+      context: ./
+      dockerfile: frontend/Dockerfile
+    container_name: cam_admin
+    env_file:
+      - ./.prod.env
+    depends_on:
+      - backend
+    expose:
+      - 80
+    volumes:
+      - ./frontend_node_modules:/home/app/node_modules
+    networks:
+      - cam_net
+
+
+networks:
+  cam_net:
+    driver: bridge

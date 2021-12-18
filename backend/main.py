@@ -13,6 +13,7 @@ from src.notifications.routers import notify_router
 from src.broadcast.routers import broadcast_router
 from src.languages.routers import languages_router
 from src.storage.routers import storage_router
+from src.clients.routers import clients_router
 
 from src.finder.routers import finder_router
 
@@ -54,6 +55,7 @@ api.include_router(persons_router, prefix="/persons", tags=["Telegram users"])
 api.include_router(notify_router, prefix="/notify", tags=["Notifications"])
 api.include_router(broadcast_router, prefix="/broadcast", tags=["Broadcast"])
 api.include_router(storage_router, prefix="/storage", tags=["Storage"])
+api.include_router(clients_router, prefix='/clients', tags=['Clients'])
 api.include_router(finder_router, prefix='/finder', tags=['Finder'])
 
 app.mount("/api/media", StaticFiles(directory="media"), name="media")

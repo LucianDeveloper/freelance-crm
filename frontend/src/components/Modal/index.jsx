@@ -1,14 +1,16 @@
 import React, {useEffect} from "react";
 import './modal.scss'
+import edit from "../../media/img/edit.svg";
+import cross from "../../media/img/cross.svg";
 
 
 const Modal = ({
-   visible = false,
-   title = '',
-   content = '',
-   footer = '',
-   onClose,
-}) => {
+                   visible = false,
+                   title = '',
+                   content = '',
+                   footer = '',
+                   onClose,
+               }) => {
     // создаем обработчик нажатия клавиши Esc
     const onKeydown = ({key}) => {
         switch (key) {
@@ -33,11 +35,11 @@ const Modal = ({
             <div className="modal-header">
                 <h3 className="modal-title">{title}</h3>
                 <span className="modal-close" onClick={onClose}>
-                    &times;
+                    <img  className="cross_img" src={cross} alt=""/>
                 </span>
             </div>
             <div className="modal-body">
-                <div className="modal-content">{content}</div>
+                {content}
             </div>
             {
                 footer && <div className="modal-footer">

@@ -18,7 +18,7 @@ const Header = () => {
             <div><img  className="header_img" src={logo} alt=""/></div>
             <div>
                 <nav className="menu">
-                     <div className="menu_link"><a className="link_menu" href="">
+                     <div className="menu_link"><a className="link_menu" href="/">
                         <div className="menu_item">
                             <img  className="menu_img" src={main} alt=""/>
                             <p className="menu_title">Главная</p>
@@ -30,13 +30,13 @@ const Header = () => {
                             <p className="menu_title">Расписание</p>
                         </div>
                     </a></div>
-                    <div className="menu_link"><a className="link_menu" href="">
+                    <div className="menu_link"><a className="link_menu" href="/clients">
                         <div className="menu_item">
                             <img  className="menu_img" src={client} alt=""/>
                             <p className="menu_title">Клиенты</p>
                         </div>
                     </a></div>
-                    <div className="menu_link"><a className="link_menu" href="">
+                    <div className="menu_link"><a className="link_menu" href="/products">
                         <div className="menu_item">
                             <img  className="menu_img" src={product} alt=""/>
                             <p className="menu_title">Товары</p>
@@ -65,9 +65,9 @@ const Header = () => {
             <div className="header_person">
                 <div className="person_info">
                     <p className="person_name">Кулешова Е. А.</p>
-                    <p className="person_inn">7841501689</p>
+                    <p className="person_inn">ИНН: 7841501689</p>
                 </div>
-                <a href=""><img  className="exit_img" src={exit} alt=""/></a>
+                <a href="/login"><img  className="exit_img" src={exit} alt=""/></a>
             </div>
         </div>
     </div>
