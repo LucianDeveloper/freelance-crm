@@ -9,6 +9,7 @@ import product from "../../media/img/products.svg"
 import timetable from "../../media/img/timetable.svg"
 import exit from "../../media/img/exit.svg"
 import main from "../../media/img/main.svg"
+import doc from "../../media/img/doc.svg"
 
 
 const Header = () => {
@@ -58,6 +59,12 @@ const Header = () => {
                         <div className="menu_item">
                             <img  className="menu_img" src={smm} alt=""/>
                             <p className="menu_title">Продвижение</p>
+                        </div>
+                    </a></div>
+                    <div className="menu_link"><a className="link_menu" href="/documents">
+                        <div className="menu_item">
+                            <img  className="menu_img" src={doc} alt=""/>
+                            <p className="menu_title">Документы</p>
                         </div>
                     </a></div>
                 </nav>

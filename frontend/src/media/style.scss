@@ -59,6 +59,7 @@ h3{
     width: 100%;
     box-sizing: border-box;
     text-decoration: none;
+    text-align: center;
 }
 .btn_new_client{
     display: block;
@@ -170,10 +171,8 @@ h3{
     background: $main-dark;
 }
 .menu_img{
-    width: 40px;
-    height: 40px;
-    max-width: 48px;
-    max-height: 48px;
+    width: 36px;
+    height: 36px;
 }
 .menu_title{
     margin: 0;
@@ -204,7 +203,7 @@ h3{
     margin: 0;
 }
 .menu_link{
-    min-width: 108px;
+    min-width: 100px;
 }
 .exit_img{
     width: 32px;
@@ -284,6 +283,11 @@ h2{
     height: auto;
     margin-right: 8px;
 }
+.load_img{
+     width: 16px;
+    height: auto;
+    margin-right: 8px;
+}
 .drop_text{
     @include font($font, 700, 13px, 24px, $text-color);
     margin: 0;
@@ -354,6 +358,10 @@ h2{
 .clients_side_card_title{
     @include font($font, 700, 24px, 32px, $text-color);
     margin: 0 0 24px 0;
+    text-align: center;
+}.clients_side_card_title2{
+    @include font($font, 700, 24px, 32px, $text-color);
+    margin:24px 0 24px 0;
     text-align: center;
 }
 .clients_side_card_subtitle{
@@ -454,6 +462,26 @@ h2{
 }
 .useful_link{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.useful_link_text{
+    @include font($font, 500, 16px, 18px, #005FAF);
+    margin-bottom: 8px;
+}
+.useful_link_img1{
+    width: 48px;
+    margin-right: 12px;
+}
+.useful_link_img2{
+    width: 46px;
+    margin-right: 12px;
+}
+.useful_link_img3{
+    width: 21px;
+    margin-right: 38px;
+}
+.client_inform_link{
+    @include font($roboto, 400, 14px, 24px, #005FAF);
+    text-decoration: underline;
 }

@@ -1,8 +1,9 @@
 import React from "react";
-import drop from "../../media/img/drop.svg";
-import edit from "../../media/img/edit.svg";
-import bin from "../../media/img/bin.svg";
 import news_img from "../../media/img/news_img.jpg";
+import msp from "../../media/img/MSP.svg";
+import msp2 from "../../media/img/msp.png";
+import derbo from "../../media/img/derbo.svg";
+import buisnes from "../../media/img/my-business.svg";
 
 
 const Home = () => {
@@ -50,6 +51,19 @@ const Home = () => {
                         <a href=""  className="news_side_card_btn_blue">Новости</a>
                         <a href=""  className="news_side_card_btn_blue">Статьи</a>
                         <a href=""  className="news_side_card_btn_blue">Документы</a>
+                        <p className="clients_side_card_title2">Полезные ссылки</p>
+                        <div className="useful_link">
+                            <img  className="useful_link_img1" src={buisnes} alt=""/>
+                            <a href="https://www.mb31.ru/" className="useful_link_text">Центр «Мой бизнес» Белгородской области</a>
+                        </div>
+                        <div className="useful_link">
+                            <img  className="useful_link_img2" src={msp2} alt=""/>
+                            <a href="https://corpmsp.ru/" className="useful_link_text">Поддержка малого и среднего предпринимательства (МСП)</a>
+                        </div>
+                        <div className="useful_link">
+                            <img  className="useful_link_img3" src={derbo} alt=""/>
+                            <a  href="http://www.derbo.ru/" className="useful_link_text">Департамент экономического развития Белгородской области</a>
+                        </div>
                     </div>
                 </div>
             </div>

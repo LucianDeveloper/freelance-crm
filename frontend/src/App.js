@@ -14,6 +14,7 @@ import Clients from "./pages/Clients";
 import Products from "./pages/Products";
 
 import '../src/media/style.scss'
+import Documents from "./pages/Documents";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                        <div className='mainContentLayout'>
                            <Routes>
                                <Route path='/products' element={<Products />}/>
+                               <Route path='/documents' element={<Documents />}/>
                                <Route path='/clients' element={<Clients />}/>
                                <Route path='/' element={<Home />}/>
                            </Routes>

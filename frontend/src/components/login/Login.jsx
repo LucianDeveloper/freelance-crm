@@ -26,7 +26,7 @@ const Login = () => {
 						<input className="input_mail" placeholder={"Электронная почта"} type="text" name="" id=""/>
 						<input className="input_pass" placeholder={"Пароль"} type="password" name="" id=""/>
 					</div>
-					<input className="btn_enter" type="submit" value="Отправить"/>
+					<a href="/" className="btn_enter" type="submit">Отправить</a>
 					<div className="centr">
 						<a href={"/"} className="registration_link">Регистрация</a>
 					</div>
