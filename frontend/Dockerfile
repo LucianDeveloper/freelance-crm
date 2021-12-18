@@ -6,7 +6,7 @@ COPY ./frontend/package*.json /app/
 COPY ./.prod.env /app/.env
 RUN npm install
 
-COPY ./admin/ /app/
+COPY ./frontend/ /app/
 
 RUN npm run build:stage
 
