@@ -1,6 +1,21 @@
 version: '3'
 
 services:
+  db:
+    image: postgres:11
+    container_name: cam_db
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.prod.env
+    ports:
+      - 5436:5432
+    networks:
+      - cam_net
+    logging:
+      options:
+        max-size: 10m
+
   backend:
     build:
       context: backend/
