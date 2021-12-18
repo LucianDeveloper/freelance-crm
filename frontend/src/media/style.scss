@@ -407,3 +407,25 @@ h2{
 .edit_img{
     width: 12px;
 }
+.news_block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.news_item{
+    width: calc(30% - 27px);
+    height: 214px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    background-size: cover;
+    padding: 40px;
+    margin-right: 40px;
+}
+.news_title{
+    @include font($font, 700, 18px, 24px, $text-color);
+    padding-bottom: 16px;
+}
+.news_subtitle{
+    @include font($font, 400, 18px, 24px, $text-color);
+    padding-bottom: 20px;
+}

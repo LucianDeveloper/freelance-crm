@@ -1,22 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import drop from "../../media/img/drop.svg";
 import bin from "../../media/img/bin.svg";
 import edit from "../../media/img/edit.svg";
 import telega from "../../media/img/telega.svg";
 import Modal from "../../components/Modal";
-import Record from "./Record";
-import api from "../../utils/api";
 
 
 const Clients = () => {
     const [clientId, setClientId] = useState(null);
-    const [items, setItems] = useState(null)
-
-    useEffect(() => {
-        api('/clients/').then((result) => {
-            setItems(result)
-        })
-    }, [])
 
     return <div>
         <Modal title={''}
@@ -65,15 +56,58 @@ const Clients = () => {
                             <td className="drop_item"><img  className="drop_img" src={drop} alt=""/> <p className="drop_text">Покупки товаров</p></td>
                             <td className="drop_item"><img  className="drop_img" src={drop} alt=""/> <p className="drop_text">Заказы услуг</p></td>
                         </tr>
-                        {
-                            (items !== null) && items.map((item, index, array) => {
-                                return <Record item={item}
-                                               setClientId={setClientId}
-                                               index={index}
-                                               maxIndex={array.length - 1}
-                                />
-                            })
-                        }
+                        <tr className="client_table_item first clients_table">
+                            {/*класс first для первого элемента с классом client_table_item*/}
+                            <input className="check"  type="checkbox"/>
+                            <td className="client_inform_text"
+                                onClick={() => {
+                                    setClientId(1)
+                                }}
+                            >
+                                Рыбочкин Михаил Романович <img  className="edit_img" src={edit} alt=""/>
+                            </td>
+                            <td className="client_inform_nbr"> +79803881508</td>
+                            <td className="client_inform_text"> luciandeveloper</td>
+                            <td className="client_inform_text"> lucian_dev2000</td>
+                            <td className="client_inform_nbr_bold"> 1570 ₽</td>
+                            <td className="client_inform_nbr_bold"> 0 ₽ </td>
+                        </tr>
+                        <tr className="client_table_item clients_table">
+                            <input className="check"  type="checkbox"/>
+                            <td className="client_inform_text"> Рыбочкин Михаил Романович <img  className="edit_img" src={edit} alt=""/></td>
+                            <td className="client_inform_nbr"> +79803881508</td>
+                            <td className="client_inform_text"> luciandeveloper</td>
+                            <td className="client_inform_text"> lucian_dev2000</td>
+                            <td className="client_inform_nbr_bold"> 1570 ₽</td>
+                            <td className="client_inform_nbr_bold"> 0 ₽ </td>
+                        </tr>
+                        <tr className="client_table_item clients_table">
+                            <input className="check"  type="checkbox"/>
+                            <td className="client_inform_text"> Рыбочкин Михаил Романович <img  className="edit_img" src={edit} alt=""/></td>
+                            <td className="client_inform_nbr"> +79803881508</td>
+                            <td className="client_inform_text"> luciandeveloper</td>
+                            <td className="client_inform_text"> lucian_dev2000</td>
+                            <td className="client_inform_nbr_bold"> 1570 ₽</td>
+                            <td className="client_inform_nbr_bold"> 0 ₽ </td>
+                        </tr>
+                        <tr className="client_table_item clients_table">
+                            <input className="check"  type="checkbox"/>
+                            <td className="client_inform_text"> Рыбочкин Михаил Романович <img  className="edit_img" src={edit} alt=""/></td>
+                            <td className="client_inform_nbr"> +79803881508</td>
+                            <td className="client_inform_text"> luciandeveloper</td>
+                            <td className="client_inform_text"> lucian_dev2000</td>
+                            <td className="client_inform_nbr_bold"> 1570 ₽</td>
+                            <td className="client_inform_nbr_bold"> 0 ₽ </td>
+                        </tr>
+                        <tr className="client_table_item last clients_table"> {/*класс last для послднего элемента с классом client_table_item*/}
+                            <input className="check"  type="checkbox"/>
+                            <td className="client_inform_text"> Рыбочкин Михаил Романович <img  className="edit_img" src={edit} alt=""/></td>
+                            <td className="client_inform_nbr"> +79803881508</td>
+                            <td className="client_inform_text"> luciandeveloper</td>
+                            <td className="client_inform_text"> lucian_dev2000</td>
+                            <td className="client_inform_nbr_bold"> 1570 ₽</td>
+                            <td className="client_inform_nbr_bold"> 0 ₽ </td>
+                        </tr>
                     </div>
 
                 </div>

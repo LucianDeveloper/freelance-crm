@@ -2,7 +2,12 @@ import ky from 'ky';
 import historyRef from './history';
 import {NotificationManager} from "react-notifications";
 
-const host = process.env.REACT_APP_URL || 'http://127.0.0.1:8000/api'
+const host = process.env.REACT_APP_URL || 'http://192.168.1.123:8000/api'
+const wsHost = host.replace(
+	'http://', 'ws://'
+).replace(
+	'https://', 'wss://'
+)
 
 const rawApi = (url, {headers, ...options} = {}, withHost=false) => {
 	return ky(
@@ -31,4 +36,4 @@ const rawApi = (url, {headers, ...options} = {}, withHost=false) => {
 }
 
 export default rawApi;
-export {host}
+export {host, wsHost}
